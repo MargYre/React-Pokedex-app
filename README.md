@@ -23,3 +23,14 @@ Ce projet React affiche des cartes de Pokémon avec leurs informations de base. 
    ```bash
    git clone https://github.com/votre-utilisateur/pokemon-card-component.git
    cd pokemon-card-component
+
+2. Installez les dépendances :
+    ```bash
+        npm install
+
+## Utilisation
+Lancez l'application en mode développement :
+
+    ```bash
+        npm start
+
