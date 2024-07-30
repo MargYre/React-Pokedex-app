@@ -26,9 +26,9 @@ Ce projet React affiche des cartes de Pokémon avec leurs informations de base. 
 
 2. Installez les dépendances :
     ```bash
-        npm install
+        npm install # ou yarn install
 
 ## Utilisation
 Lancez l'application en mode développement :
     ```bash
-        npm start
+        npm start # ou yarn start
