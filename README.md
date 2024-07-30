@@ -30,7 +30,5 @@ Ce projet React affiche des cartes de Pokémon avec leurs informations de base. 
 
 ## Utilisation
 Lancez l'application en mode développement :
-
     ```bash
         npm start
-
