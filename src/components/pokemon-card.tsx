@@ -30,7 +30,9 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon, borderColor = '#009688'
                 <div className="card-content">
                     <p>{pokemon.name}</p>
                     <p><small>{formatDate(pokemon.created)}</small></p>
-                    
+                    {pokemon.types.map(type => (
+                        <span key={type}>{type}</span>
+                    ))}
                 </div>
                 </div>
             </div> 
