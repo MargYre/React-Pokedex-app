@@ -1,6 +1,7 @@
 import React, {FunctionComponent, useState, useEffect} from 'react';
 import PokemonList from './pages/pokemon-list';
 import PokemonDetail from './pages/pokemon-detail';
+import PageNotFound from './pages/page-not-found';
 import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
   
 const App: FunctionComponent = () => { // FunctionComponent is a type of Function that returns JSX.Element.
@@ -19,6 +20,7 @@ const App: FunctionComponent = () => { // FunctionComponent is a type of Functio
                      <Route exact path="/" component={PokemonList}/>
                      <Route exact path="/pokemons" component={PokemonList}/>
                      <Route exact path="/pokemons/:id" component={PokemonDetail}/>
+                     <Route component={PageNotFound}/>
               </Switch>
        </div>
  </Router>
