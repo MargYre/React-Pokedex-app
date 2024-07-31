@@ -1,6 +1,8 @@
 import React, {FunctionComponent, useState} from 'react';
 import Pokemon from '../models/pokemon';
 import './pokemon-card.css';
+import formatDate from '../helpers/format-date';
+import formatType from '../helpers/format-type';
 
 type Props = {
     pokemon: Pokemon
@@ -16,10 +18,6 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon, borderColor = '#009688'
         setColor('#f5f5f5'); // TODO: change the color to the default one.
     }
 
-    const formatDate = (date: Date): string => {
-        return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
-    }
-
     return (
         <div className="col s6 m4" onMouseEnter={showBorder} onMouseLeave={hideBorder}>
             <div className="card horizontal" style={{borderColor: color}}>
@@ -31,7 +29,7 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon, borderColor = '#009688'
                     <p>{pokemon.name}</p>
                     <p><small>{formatDate(pokemon.created)}</small></p>
                     {pokemon.types.map(type => (
-                        <span key={type}>{type}</span>
+                        <span key={type} className={formatType(type)}>{type}</span>
                     ))}
                 </div>
                 </div>
